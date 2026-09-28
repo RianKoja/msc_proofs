@@ -41,6 +41,6 @@ jobs:
       # Exports only declarations in namespace Koja (and their dependencies); all of Mathlib is ~1GB.
       - name: Nanoda check
         run: |
-          decls=$(grep -hoP '^(theorem|lemma|def) \K\S+' MscProofs/*.lean | sed 's/^/Koja./')
+          decls=$(grep -hoP '^(noncomputable )?(theorem|lemma|def) \K\S+' MscProofs/*.lean | sed 's/^/Koja./')
           lake env ../lean4export/.lake/build/bin/lean4export MscProofs -- $decls \
             | ../nanoda_lib/target/release/nanoda_bin nanoda.json

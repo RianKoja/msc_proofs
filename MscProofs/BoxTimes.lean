@@ -17,7 +17,8 @@ This file proves the algebraic core:
 * `Koja.boxTimes_vecMulVec` (Koja's identity): for rank-one arguments,
   `(u uᵀ) ⊠ (v vᵀ) = (u ⨯₃ v)(u ⨯₃ v)ᵀ`;
 * `Koja.boxTimes_comm`: Koja's commutativity property;
-* `Koja.boxTimes_smul_left`, `Koja.boxTimes_smul_right`: Koja's scaling properties.
+* `Koja.boxTimes_smul_left`, `Koja.boxTimes_smul_right`: Koja's scaling properties;
+* `Koja.boxTimesₗ`: Koja's bilinearity property, packaging `⊠` as a bilinear map.
 -/
 
 namespace Koja
@@ -57,6 +58,17 @@ theorem boxTimes_smul_left (c : R) (A B : Matrix (Fin 3) (Fin 3) R) :
   ext i j
   fin_cases i <;> fin_cases j <;> simp [boxTimes] <;> ring
 
+/-- Koja's additivity property in the left argument. -/
+theorem boxTimes_add_left (A A' B : Matrix (Fin 3) (Fin 3) R) :
+    (A + A') ⊠ B = A ⊠ B + A' ⊠ B := by
+  ext i j
+  fin_cases i <;> fin_cases j <;> simp [boxTimes] <;> ring
+
+/-- Koja's additivity property in the right argument. -/
+theorem boxTimes_add_right (A B B' : Matrix (Fin 3) (Fin 3) R) :
+    A ⊠ (B + B') = A ⊠ B + A ⊠ B' := by
+  rw [boxTimes_comm, boxTimes_add_left, boxTimes_comm, boxTimes_comm B']
+
 /-- Koja's scaling property in the right argument. -/
 theorem boxTimes_smul_right (c : R) (A B : Matrix (Fin 3) (Fin 3) R) :
     A ⊠ (c • B) = c • (A ⊠ B) := by
@@ -67,5 +79,14 @@ cross product by `a² b²`. -/
 theorem boxTimes_smul_smul (a b : R) (A B : Matrix (Fin 3) (Fin 3) R) :
     (a ^ 2 • A) ⊠ (b ^ 2 • B) = (a ^ 2 * b ^ 2) • (A ⊠ B) := by
   rw [boxTimes_smul_left, boxTimes_smul_right, smul_smul]
+
+/-- Koja's bilinearity property: the box-times operator as a bilinear map. -/
+def boxTimesₗ : Matrix (Fin 3) (Fin 3) R →ₗ[R] Matrix (Fin 3) (Fin 3) R →ₗ[R]
+    Matrix (Fin 3) (Fin 3) R :=
+  LinearMap.mk₂ R boxTimes boxTimes_add_left boxTimes_smul_left boxTimes_add_right
+    boxTimes_smul_right
+
+@[simp]
+theorem boxTimesₗ_apply (A B : Matrix (Fin 3) (Fin 3) R) : boxTimesₗ A B = A ⊠ B := rfl
 
 end Koja
