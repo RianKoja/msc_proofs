@@ -5,6 +5,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1" # weekly Novacula rerun
 
 permissions:
   contents: read
@@ -44,3 +46,15 @@ jobs:
           decls=$(grep -hoP '^(noncomputable )?(theorem|lemma|def) \K\S+' MscProofs/*.lean | sed 's/^/Koja./')
           lake env ../lean4export/.lake/build/bin/lean4export MscProofs -- $decls \
             | ../nanoda_lib/target/release/nanoda_bin nanoda.json
+
+  # Complexity cost of every theorem (https://github.com/RianKoja/novacula). Keeps the history,
+  # chart and badge on the `novacula` branch.
+  novacula:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v5
+      - uses: RianKoja/novacula@main
+        with:
+          theorems: all

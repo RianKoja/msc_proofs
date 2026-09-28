@@ -1,5 +1,7 @@
 # msc_proofs
 
+[![Novacula](https://raw.githubusercontent.com/RianKoja/msc_proofs/novacula/badge.svg)](https://github.com/RianKoja/msc_proofs/tree/novacula)
+
 Lean 4 formalization of results from my master thesis. Work in progress.
 
 ## Results
@@ -32,6 +34,15 @@ lake lint
 
 CI also re-checks the proofs with the [nanoda](https://github.com/ammkrn/nanoda_lib) external
 type checker.
+
+## Complexity
+
+CI scores every theorem with [Novacula](https://github.com/RianKoja/novacula), a deterministic
+complexity cost for correct Lean proofs (lower means easier to understand fully). The badge shows
+the cost of all theorems together and the Lean version used. The chart tracks each theorem over
+time; shaded bands mark Lean versions.
+
+![Novacula history](https://raw.githubusercontent.com/RianKoja/msc_proofs/novacula/history.svg)
 
 ## Reference
 
