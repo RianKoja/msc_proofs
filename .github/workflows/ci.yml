@@ -38,7 +38,7 @@ jobs:
           git -C ../nanoda_lib checkout "$NANODA_REV"
           cargo build --release --manifest-path ../nanoda_lib/Cargo.toml
 
-      # ponytail: assumes every declaration lives in namespace Koja; exporting all of Mathlib is ~1GB.
+      # Exports only declarations in namespace Koja (and their dependencies); all of Mathlib is ~1GB.
       - name: Nanoda check
         run: |
           decls=$(grep -hoP '^(theorem|lemma|def) \K\S+' MscProofs/*.lean | sed 's/^/Koja./')

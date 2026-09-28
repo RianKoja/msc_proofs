@@ -19,3 +19,16 @@ lake lint
 
 CI also re-checks the proofs with the [nanoda](https://github.com/ammkrn/nanoda_lib) external
 type checker.
+
+## Reference
+
+Koja, Rian. "On methods for in-flight alignment of inertial navigation systems." (2019).
+Master's thesis.
+
+```bibtex
+@mastersthesis{koja2019,
+  author = {Koja, Rian},
+  title  = {On methods for in-flight alignment of inertial navigation systems},
+  year   = {2019}
+}
+```
