@@ -22,6 +22,12 @@ All results below are from my master thesis.
   term, for the norm of the integrated gravity vector of a stationary vehicle seen from the
   rotating Earth frame.
 
+- **Extensions beyond the thesis** (`MscProofs/BoxTimesExtensions.lean`). Some new results
+  about `⊠`, not in the thesis, were also incorporated: among them its covariance formula for
+  non-zero means, its link to the adjugate, and preservation of positive (semi)definiteness. They
+  are listed in [EXTENSIONS.md](EXTENSIONS.md). For now, please cite this repository when
+  referring to these extensions.
+
 ## Checking
 
 ```sh

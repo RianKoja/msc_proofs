@@ -1,4 +1,5 @@
 import MscProofs.BoxTimes
+import MscProofs.BoxTimesExtensions
 import MscProofs.Chebyshev
 import MscProofs.Covariance
 import MscProofs.CovariancePropagation
