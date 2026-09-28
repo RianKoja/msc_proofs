@@ -4,7 +4,7 @@ Lean 4 formalization of results from my master thesis. Work in progress.
 
 ## Results
 
-All results below are from my master thesis.
+All results below are from my master thesis, except the last entry, which lists new extensions.
 
 - **Covariance of a cross product** (`MscProofs/BoxTimes.lean`, `MscProofs/Covariance.lean`).
   For independent zero-mean square-integrable random vectors in ℝ³, the covariance of their
