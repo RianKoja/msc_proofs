@@ -58,7 +58,7 @@ jobs:
     concurrency:
       group: novacula-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v5
-      - uses: RianKoja/novacula@d7f0aa00743efe81f02580762036bc8798662f4d # v0.2.0
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: RianKoja/novacula@0a03605f19b7a1e622dd1c59fe27105e5fd73d5f # v0.2.1
         with:
           theorems: all
