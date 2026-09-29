@@ -153,7 +153,7 @@ theorem vecMulVec_boxTimes (u : Fin 3 → R) (hB : B.IsSymm) :
     simp [boxTimes, crossMatrix, vecMulVec_apply, mul_apply, vecMul, dotProduct,
       Fin.sum_univ_three, *] <;> ring
 
-/-- `u` spans the kernel direction of `(u uᵀ) ⊠ B`, for any `B`. -/
+/-- `u` lies in the kernel of `(u uᵀ) ⊠ B`, for any `B`. -/
 theorem vecMulVec_boxTimes_mulVec_self (u : Fin 3 → R) (B : Matrix (Fin 3) (Fin 3) R) :
     (vecMulVec u u ⊠ B) *ᵥ u = 0 := by
   ext i
