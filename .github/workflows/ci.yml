@@ -53,11 +53,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    # Runs on the same ref queue instead of racing to update the history branch.
+    # Only the default branch publishes (action input `push: auto`), so its runs share this group
+    # and queue instead of racing to update the history branch.
     concurrency:
       group: novacula-${{ github.ref }}
     steps:
       - uses: actions/checkout@v5
-      - uses: RianKoja/novacula@main
+      - uses: RianKoja/novacula@d7f0aa00743efe81f02580762036bc8798662f4d # v0.2.0
         with:
           theorems: all
