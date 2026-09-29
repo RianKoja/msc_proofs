@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 710" width="1060" height="710" font-family="sans-serif">
+<rect width="1060" height="710" fill="#ffffff"/>
+<rect x="70" y="46" width="680" height="600" fill="#eef2f7"/>
+<line x1="70" y1="46" x2="70" y2="646" stroke="#c7d2de" stroke-width="1"/>
+<text x="410" y="34" font-size="12" fill="#44546a" text-anchor="middle">Lean 4.34.1</text>
+<line x1="70" y1="646" x2="750" y2="646" stroke="#333" stroke-width="1"/>
+<line x1="70" y1="46" x2="70" y2="646" stroke="#333" stroke-width="1"/>
+<text x="60" y="50" font-size="11" fill="#333" text-anchor="end">335301</text>
+<text x="60" y="646" font-size="11" fill="#333" text-anchor="end">756</text>
+<text x="20" y="346" font-size="12" fill="#333" transform="rotate(-90 20 346)" text-anchor="middle">cost (log)</text>
+<text x="410" y="664" font-size="10" fill="#333" text-anchor="middle" transform="rotate(-35 410 664)">2026-09-28</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="410,183"/>
+<circle cx="410" cy="183" r="3" fill="#1f77b4"/>
+<text x="764" y="60" font-size="11" fill="#1f77b4">Koja.boxTimesL_apply</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="410,285"/>
+<circle cx="410" cy="285" r="3" fill="#d62728"/>
+<text x="764" y="78" font-size="11" fill="#d62728">Koja.boxTimes_add_left</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2" points="410,238"/>
+<circle cx="410" cy="238" r="3" fill="#2ca02c"/>
+<text x="764" y="96" font-size="11" fill="#2ca02c">Koja.boxTimes_add_right</text>
+<polyline fill="none" stroke="#9467bd" stroke-width="2" points="410,315"/>
+<circle cx="410" cy="315" r="3" fill="#9467bd"/>
+<text x="764" y="114" font-size="11" fill="#9467bd">Koja.boxTimes_comm</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2" points="410,302"/>
+<circle cx="410" cy="302" r="3" fill="#ff7f0e"/>
+<text x="764" y="132" font-size="11" fill="#ff7f0e">Koja.boxTimes_smul_left</text>
+<polyline fill="none" stroke="#17becf" stroke-width="2" points="410,246"/>
+<circle cx="410" cy="246" r="3" fill="#17becf"/>
+<text x="764" y="150" font-size="11" fill="#17becf">Koja.boxTimes_smul_right</text>
+<polyline fill="none" stroke="#8c564b" stroke-width="2" points="410,246"/>
+<circle cx="410" cy="246" r="3" fill="#8c564b"/>
+<text x="764" y="168" font-size="11" fill="#8c564b">Koja.boxTimes_smul_smul</text>
+<polyline fill="none" stroke="#e377c2" stroke-width="2" points="410,276"/>
+<circle cx="410" cy="276" r="3" fill="#e377c2"/>
+<text x="764" y="186" font-size="11" fill="#e377c2">Koja.boxTimes_vecMulVec</text>
+<polyline fill="none" stroke="#7f7f7f" stroke-width="2" points="410,200"/>
+<circle cx="410" cy="200" r="3" fill="#7f7f7f"/>
+<text x="764" y="204" font-size="11" fill="#7f7f7f">Koja.boxTimesₗ_apply</text>
+<polyline fill="none" stroke="#bcbd22" stroke-width="2" points="410,221"/>
+<circle cx="410" cy="221" r="3" fill="#bcbd22"/>
+<text x="764" y="222" font-size="11" fill="#bcbd22">Koja.chebyshev_multivariate</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="410,481"/>
+<circle cx="410" cy="481" r="3" fill="#1f77b4"/>
+<text x="764" y="240" font-size="11" fill="#1f77b4">Koja.chebyshev_multivariate_const</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="410,89"/>
+<circle cx="410" cy="89" r="3" fill="#d62728"/>
+<text x="764" y="258" font-size="11" fill="#d62728">Koja.covMat_cross</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2" points="410,85"/>
+<circle cx="410" cy="85" r="3" fill="#2ca02c"/>
+<text x="764" y="276" font-size="11" fill="#2ca02c">Koja.covMat_cross_mulVec</text>
+<polyline fill="none" stroke="#9467bd" stroke-width="2" points="410,332"/>
+<circle cx="410" cy="332" r="3" fill="#9467bd"/>
+<text x="764" y="294" font-size="11" fill="#9467bd">Koja.covMat_mulVec</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2" points="410,81"/>
+<circle cx="410" cy="81" r="3" fill="#ff7f0e"/>
+<text x="764" y="312" font-size="11" fill="#ff7f0e">Koja.covMat_mulVec_cross</text>
+<polyline fill="none" stroke="#17becf" stroke-width="2" points="410,464"/>
+<circle cx="410" cy="464" r="3" fill="#17becf"/>
+<text x="764" y="330" font-size="11" fill="#17becf">Koja.covMat_smul</text>
+<polyline fill="none" stroke="#8c564b" stroke-width="2" points="410,89"/>
+<circle cx="410" cy="89" r="3" fill="#8c564b"/>
+<text x="764" y="348" font-size="11" fill="#8c564b">Koja.covMat_smul_cross</text>
+<polyline fill="none" stroke="#e377c2" stroke-width="2" points="410,212"/>
+<circle cx="410" cy="212" r="3" fill="#e377c2"/>
+<text x="764" y="366" font-size="11" fill="#e377c2">Koja.covMat_sum</text>
+<polyline fill="none" stroke="#7f7f7f" stroke-width="2" points="410,195"/>
+<circle cx="410" cy="195" r="3" fill="#7f7f7f"/>
+<text x="764" y="384" font-size="11" fill="#7f7f7f">Koja.covMat_sum_mulVec</text>
+<polyline fill="none" stroke="#bcbd22" stroke-width="2" points="410,191"/>
+<circle cx="410" cy="191" r="3" fill="#bcbd22"/>
+<text x="764" y="402" font-size="11" fill="#bcbd22">Koja.covMat_sum_mulVec_succ</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="410,370"/>
+<circle cx="410" cy="370" r="3" fill="#1f77b4"/>
+<text x="764" y="420" font-size="11" fill="#1f77b4">Koja.integrable_outer</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="410,349"/>
+<circle cx="410" cy="349" r="3" fill="#d62728"/>
+<text x="764" y="438" font-size="11" fill="#d62728">Koja.integrable_sq_sub_mean</text>
+<polyline fill="none" stroke="#2ca02c" stroke-width="2" points="410,349"/>
+<circle cx="410" cy="349" r="3" fill="#2ca02c"/>
+<text x="764" y="456" font-size="11" fill="#2ca02c">Koja.integral_eq_zero_of_eval</text>
+<polyline fill="none" stroke="#9467bd" stroke-width="2" points="410,332"/>
+<circle cx="410" cy="332" r="3" fill="#9467bd"/>
+<text x="764" y="474" font-size="11" fill="#9467bd">Koja.integral_outer_apply</text>
+<polyline fill="none" stroke="#ff7f0e" stroke-width="2" points="410,225"/>
+<circle cx="410" cy="225" r="3" fill="#ff7f0e"/>
+<text x="764" y="492" font-size="11" fill="#ff7f0e">Koja.integral_rotZ_mulVec</text>
+<polyline fill="none" stroke="#17becf" stroke-width="2" points="410,327"/>
+<circle cx="410" cy="327" r="3" fill="#17becf"/>
+<text x="764" y="510" font-size="11" fill="#17becf">Koja.integral_sum_sq_sub_mean</text>
+<polyline fill="none" stroke="#8c564b" stroke-width="2" points="410,646"/>
+<circle cx="410" cy="646" r="3" fill="#8c564b"/>
+<text x="764" y="528" font-size="11" fill="#8c564b">Koja.measurable_outer</text>
+<polyline fill="none" stroke="#e377c2" stroke-width="2" points="410,251"/>
+<circle cx="410" cy="251" r="3" fill="#e377c2"/>
+<text x="764" y="546" font-size="11" fill="#e377c2">Koja.memLp_cross</text>
+<polyline fill="none" stroke="#7f7f7f" stroke-width="2" points="410,281"/>
+<circle cx="410" cy="281" r="3" fill="#7f7f7f"/>
+<text x="764" y="564" font-size="11" fill="#7f7f7f">Koja.memLp_two_mul_of_indepFun</text>
+<polyline fill="none" stroke="#bcbd22" stroke-width="2" points="410,153"/>
+<circle cx="410" cy="153" r="3" fill="#bcbd22"/>
+<text x="764" y="582" font-size="11" fill="#bcbd22">Koja.outer_cross</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="410,191"/>
+<circle cx="410" cy="191" r="3" fill="#1f77b4"/>
+<text x="764" y="600" font-size="11" fill="#1f77b4">Koja.trendLine</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="410,46"/>
+<circle cx="410" cy="46" r="3" fill="#d62728"/>
+<text x="764" y="618" font-size="11" fill="#d62728">all selected</text>
+</svg>
