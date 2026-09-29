@@ -53,6 +53,9 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    # Runs on the same ref queue instead of racing to update the history branch.
+    concurrency:
+      group: novacula-${{ github.ref }}
     steps:
       - uses: actions/checkout@v5
       - uses: RianKoja/novacula@main
