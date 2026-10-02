@@ -4,7 +4,7 @@ Lean 4 formalization of results from my master thesis. Work in progress.
 
 ## Results
 
-All results below are from my master thesis.
+All results below are from my master thesis, except the last entry, which lists new extensions.
 
 - **Covariance of a cross product** (`MscProofs/BoxTimes.lean`, `MscProofs/Covariance.lean`).
   For independent zero-mean square-integrable random vectors in ℝ³, the covariance of their
@@ -24,6 +24,12 @@ All results below are from my master thesis.
 - **Trend line for the v vectors** (`MscProofs/TrendLine.lean`). Closed form, with a `sinc`
   term, for the norm of the integrated gravity vector of a stationary vehicle seen from the
   rotating Earth frame.
+
+- **Extensions beyond the thesis** (`MscProofs/BoxTimesExtensions.lean`). Some new results
+  about `⊠`, not in the thesis, were also incorporated: among them its covariance formula for
+  non-zero means, its link to the adjugate, and preservation of positive (semi)definiteness. They
+  are listed in [EXTENSIONS.md](EXTENSIONS.md). For now, please cite this repository when
+  referring to these extensions.
 
 ## Checking
 
