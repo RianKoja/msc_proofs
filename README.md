@@ -72,28 +72,7 @@ BibTeX entry (also in [thesis.bib](thesis.bib)):
                          declaration employed for two additional methods (OPT and OPTc).
                          Results are validated with simulated data and Monte-Carlo tests
                          are employed to assess the performance and validate some
-                         assumptions associated with those methods. RESUMO: Este trabalho
-                         revisa e adapta os m{\'e}todos de inicializa{\c{c}}{\~a}o de
-                         atitude em voo de um Sistema de Navega{\c{c}}{\~a}o Inercial via
-                         F{\'o}rmulas de Integra{\c{c}}{\~a}o
-                         Posi{\c{c}}{\~a}o-Velocidade (PIF e VIF), os quais s{\~a}o
-                         baseados em medi{\c{c}}{\~o}es provenientes de um receptor GPS e
-                         sensores inerciais. S{\~a}o apresentadas algumas
-                         limita{\c{c}}{\~o}es desses m{\'e}todos, que s{\~a}o mais
-                         cr{\'{\i}}ticas para um algoritmo de compara{\c{c}}{\~a}o
-                         simplificado (TRIAD), o qual permite desenvolver um m{\'e}todo
-                         derivado (FIL), baseado em verifica{\c{c}}{\~o}es de
-                         condi{\c{c}}{\~o}es l{\'o}gicas que mitigam erros grandes de
-                         alinhamento. Estes algoritmos s{\~a}o ent{\~a}o analisados pelo
-                         desenvolvimento de um m{\'e}todo original de
-                         estima{\c{c}}{\~a}o de erro embarcado, baseado na
-                         covari{\^a}ncia estimada dos vetores envolvidos, produzindo
-                         ent{\~a}o um erro de dire{\c{c}}{\~a}o dos vetores, que permite
-                         um crit{\'e}rio de declara{\c{c}}{\~a}o de converg{\^e}ncia
-                         empregado em dois m{\'e}todos adicionais (OPT e OPTc). Resultados
-                         s{\~a}o validados com dados simulados e testes de Monte-Carlo
-                         s{\~a}o empregados para aferir o desempenho e validar
-                         hip{\'o}teses associadas a esses m{\'e}todos.",
+                         assumptions associated with those methods.",
             committee = "Kuga, H{\'e}lio Koiti (presidente) and Leite Filho, Waldemar de
                          Castro (orientador) and Chagas, Ronan Arraes Jardim and Waldmann,
                          Jacques",
