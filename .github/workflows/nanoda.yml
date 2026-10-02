@@ -1,12 +1,10 @@
-name: CI
+name: nanoda
 
 on:
   push:
     branches: [main]
   pull_request:
   workflow_dispatch:
-  schedule:
-    - cron: "0 6 * * 1" # weekly Novacula rerun
 
 permissions:
   contents: read
@@ -17,16 +15,14 @@ env:
   NANODA_REV: 3a2407216ee84a75f9e1aead6803d0578be06ae7
 
 jobs:
-  check:
+  # Re-checks the proofs with the nanoda external type checker.
+  nanoda:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-
-      # Lean kernel check; Mathlib style linters run during the build, --wfail makes them fatal.
       - uses: leanprover/lean-action@v1
         with:
-          build-args: --wfail
-          lint: true
+          lint: false # the Lint workflow runs the linters
 
       - name: Build lean4export
         run: |
@@ -46,19 +42,3 @@ jobs:
           decls=$(grep -hoP '^(noncomputable )?(theorem|lemma|def) \K\S+' MscProofs/*.lean | sed 's/^/Koja./')
           lake env ../lean4export/.lake/build/bin/lean4export MscProofs -- $decls \
             | ../nanoda_lib/target/release/nanoda_bin nanoda.json
-
-  # Complexity cost of every theorem (https://github.com/RianKoja/novacula). Keeps the history,
-  # chart and badge on the `novacula` branch.
-  novacula:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    # Only the default branch publishes (action input `push: auto`), so its runs share this group
-    # and queue instead of racing to update the history branch.
-    concurrency:
-      group: novacula-${{ github.ref }}
-    steps:
-      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
-      - uses: RianKoja/novacula@0a03605f19b7a1e622dd1c59fe27105e5fd73d5f # v0.2.1
-        with:
-          theorems: all

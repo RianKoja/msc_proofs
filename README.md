@@ -1,5 +1,10 @@
 # msc_proofs
 
+[![Lean kernel](https://github.com/RianKoja/msc_proofs/actions/workflows/lean.yml/badge.svg?branch=main)](https://github.com/RianKoja/msc_proofs/actions/workflows/lean.yml)
+[![nanoda](https://github.com/RianKoja/msc_proofs/actions/workflows/nanoda.yml/badge.svg?branch=main)](https://github.com/RianKoja/msc_proofs/actions/workflows/nanoda.yml)
+[![Lint](https://github.com/RianKoja/msc_proofs/actions/workflows/lint.yml/badge.svg?branch=main)](https://github.com/RianKoja/msc_proofs/actions/workflows/lint.yml)
+[![Lean version](https://img.shields.io/badge/dynamic/regex?url=https%3A%2F%2Fraw.githubusercontent.com%2FRianKoja%2Fmsc_proofs%2Fmain%2Flean-toolchain&search=v%5Cd.*&label=Lean)](lean-toolchain)
+[![License](https://img.shields.io/github/license/RianKoja/msc_proofs)](LICENSE)
 [![Novacula](https://raw.githubusercontent.com/RianKoja/msc_proofs/novacula/badge.svg)](https://github.com/RianKoja/msc_proofs/tree/novacula)
 
 Lean 4 formalization of results from my master thesis. Work in progress.
@@ -39,8 +44,9 @@ type checker.
 
 CI scores every theorem with [Novacula](https://github.com/RianKoja/novacula), a deterministic
 complexity cost for correct Lean proofs (lower means easier to understand fully). The badge shows
-the cost of all theorems together and the Lean version used. The chart tracks each theorem over
-time; shaded bands mark Lean versions.
+the cost of all theorems together, the Novacula version that computed it and the Lean version
+used. The chart tracks each theorem over time; shaded bands mark Lean versions and dashed lines
+mark Novacula versions, since costs are comparable only within one version of each.
 
 ![Novacula history](https://raw.githubusercontent.com/RianKoja/msc_proofs/novacula/history.svg)
 

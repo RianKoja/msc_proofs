@@ -1,0 +1,22 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  # Mathlib style linters run during the build, --wfail makes them fatal; `lake lint` runs the
+  # environment linters.
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: leanprover/lean-action@v1
+        with:
+          build-args: --wfail
+          lint: true
