@@ -11,13 +11,29 @@ on:
 permissions:
   contents: read
 
+# Complexity cost of every theorem (https://github.com/RianKoja/novacula). Pull requests only get
+# a job summary; other runs also publish the history, chart and badge on the `novacula` branch.
 jobs:
-  # Complexity cost of every theorem (https://github.com/RianKoja/novacula). Keeps the history,
-  # chart and badge on the `novacula` branch.
-  novacula:
+  # Read-only: pull request code is built here, so the token must not be able to write.
+  score:
+    name: novacula
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        with:
+          persist-credentials: false
+      - uses: RianKoja/novacula@0a03605f19b7a1e622dd1c59fe27105e5fd73d5f # v0.2.1
+        with:
+          theorems: all
+          push: false
+
+  publish:
+    name: novacula
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # push the history to the `novacula` branch
     # Only the default branch publishes (action input `push: auto`), so its runs share this group
     # and queue instead of racing to update the history branch.
     concurrency:
