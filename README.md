@@ -18,8 +18,9 @@ All results below are from my master thesis.
 - **Covariance propagation, cases 1 to 4** (`MscProofs/CovariancePropagation.lean`). Covariance
   formulas for sums of known gains times: pairwise independent noise (case 1), the cross product
   of a common bias with a case 1 sum (case 2), the cross product of fresh noise with a case 1 sum
-  (case 3), and a case 1 sum (case 4). Each is stated in a form suitable for on-board computation,
-  needing only a few running matrix sums instead of the whole history.
+  (case 3), and a case 1 sum (case 4). Each is stated as a recursion on a few running matrix
+  sums, so on-board software can propagate it with fixed-size state instead of buffering the
+  whole history.
 - **Trend line for the v vectors** (`MscProofs/TrendLine.lean`). Closed form, with a `sinc`
   term, for the norm of the integrated gravity vector of a stationary vehicle seen from the
   rotating Earth frame.

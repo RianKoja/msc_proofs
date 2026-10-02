@@ -8,13 +8,15 @@ import MscProofs.Covariance
 /-!
 # Koja's covariance propagation
 
-The four covariance propagation cases of the thesis, each in closed form and as a recursion
-suitable for on-board computation:
+The four covariance propagation cases of the thesis. Each result gives the covariance at step `m`
+from a few running matrix sums that gain one known term per step, so it can be propagated on
+board with fixed-size state instead of a buffer of past gains:
 
 * Case 1, sum of known gains times noise: `Koja.covMat_sum_mulVec`, `Koja.covMat_sum_mulVec_succ`;
 * Case 2, sum of known gains times bias cross product matrix times case 1: `Koja.covMat_case2`;
 * Case 3, sum of known gains times noise cross product matrix times case 1: `Koja.covMat_case3`;
-* Case 4, sum of known gains times case 1: `Koja.covMat_case4_closed`, `Koja.covMat_case4`.
+* Case 4, sum of known gains times case 1: `Koja.covMat_case4` (`Koja.covMat_case4_closed` is the
+  intermediate form over the whole history).
 -/
 namespace Koja
 
