@@ -11,7 +11,7 @@ Lean 4 formalization of results from my master thesis. Work in progress.
 
 ## Results
 
-All results below are from my master thesis.
+All results below are from my master thesis, except the last entry, which lists new extensions.
 
 - **Covariance of a cross product** (`MscProofs/BoxTimes.lean`, `MscProofs/Covariance.lean`).
   For independent zero-mean square-integrable random vectors in ℝ³, the covariance of their
@@ -22,12 +22,21 @@ All results below are from my master thesis.
 - **Multivariate Chebyshev inequality** (`MscProofs/Chebyshev.lean`). A random vector deviates
   from its mean by at least `k √(tr K)` with probability at most `1/k²`. The formal statement
   needs `tr K > 0`; a counterexample shows the condition cannot be dropped.
-- **Covariance propagation, case 1** (`MscProofs/CovariancePropagation.lean`). The covariance
-  of a sum of known gains times pairwise independent noise, in closed form and as a one-step
-  recursion suitable for on-board computation.
+- **Covariance propagation, cases 1 to 4** (`MscProofs/CovariancePropagation.lean`). Covariance
+  formulas for sums of known gains times: pairwise independent noise (case 1), the cross product
+  of a common bias with a case 1 sum (case 2), the cross product of fresh noise with a case 1 sum
+  (case 3), and a case 1 sum (case 4). Each is stated as a recursion on a few running matrix
+  sums, so on-board software can propagate it with fixed-size state instead of buffering the
+  whole history.
 - **Trend line for the v vectors** (`MscProofs/TrendLine.lean`). Closed form, with a `sinc`
   term, for the norm of the integrated gravity vector of a stationary vehicle seen from the
   rotating Earth frame.
+
+- **Extensions beyond the thesis** (`MscProofs/BoxTimesExtensions.lean`). Some new results
+  about `⊠`, not in the thesis, were also incorporated: among them its covariance formula for
+  non-zero means, its link to the adjugate, and preservation of positive (semi)definiteness. They
+  are listed in [EXTENSIONS.md](EXTENSIONS.md). For now, please cite this repository when
+  referring to these extensions.
 
 ## Checking
 
