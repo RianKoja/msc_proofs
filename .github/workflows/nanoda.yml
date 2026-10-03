@@ -1,4 +1,4 @@
-name: CI
+name: nanoda
 
 on:
   push:
@@ -15,16 +15,16 @@ env:
   NANODA_REV: 3a2407216ee84a75f9e1aead6803d0578be06ae7
 
 jobs:
-  check:
+  # Re-checks the proofs with the nanoda external type checker.
+  nanoda:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-
-      # Lean kernel check; Mathlib style linters run during the build, --wfail makes them fatal.
-      - uses: leanprover/lean-action@v1
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
-          build-args: --wfail
-          lint: true
+          persist-credentials: false
+      - uses: leanprover/lean-action@50fcf42d2e460296f1a34b402e990d1b24f8b596 # v1.6.0
+        with:
+          lint: false # the Lint workflow runs the linters
 
       - name: Build lean4export
         run: |
