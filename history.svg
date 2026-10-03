@@ -3,6 +3,8 @@
 <rect x="70" y="46" width="680" height="600" fill="#eef2f7"/>
 <line x1="70" y1="46" x2="70" y2="646" stroke="#c7d2de" stroke-width="1"/>
 <text x="410" y="34" font-size="12" fill="#44546a" text-anchor="middle">Lean 4.34.1</text>
+<line x1="70" y1="46" x2="70" y2="646" stroke="#8a6d3b" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="74" y="60" font-size="10" fill="#8a6d3b" text-anchor="start">novacula v0.0</text>
 <line x1="70" y1="646" x2="750" y2="646" stroke="#333" stroke-width="1"/>
 <line x1="70" y1="46" x2="70" y2="646" stroke="#333" stroke-width="1"/>
 <text x="60" y="50" font-size="11" fill="#333" text-anchor="end">335301</text>
