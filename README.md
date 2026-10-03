@@ -55,7 +55,7 @@ CI scores every theorem with [Novacula](https://github.com/RianKoja/novacula), a
 complexity cost for correct Lean proofs (lower means easier to understand fully). The badge shows
 the cost of all theorems together, the Novacula version that computed it and the Lean version
 used. The chart tracks each theorem over time; shaded bands mark Lean versions and dashed lines
-mark Novacula versions, since costs are comparable only within one version of each.
+mark Novacula minor versions, since costs are comparable only within one version of each.
 
 ![Novacula history](https://raw.githubusercontent.com/RianKoja/msc_proofs/novacula/history.svg)
 
