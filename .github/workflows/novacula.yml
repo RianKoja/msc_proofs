@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           persist-credentials: false
-      - uses: RianKoja/novacula@0a03605f19b7a1e622dd1c59fe27105e5fd73d5f # v0.2.1
+      - uses: RianKoja/novacula@a1d2905011bfe922f48c3842ac158f3c25237f11 # v0.3.0
         with:
           theorems: all
           push: false
@@ -40,6 +40,6 @@ jobs:
       group: novacula-${{ github.ref }}
     steps:
       - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
-      - uses: RianKoja/novacula@0a03605f19b7a1e622dd1c59fe27105e5fd73d5f # v0.2.1
+      - uses: RianKoja/novacula@a1d2905011bfe922f48c3842ac158f3c25237f11 # v0.3.0
         with:
           theorems: all
